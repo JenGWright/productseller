@@ -3,7 +3,7 @@ import { Product } from "../models/Product";
 //import { UserContext } from "../App";
 interface propsInterface {
   data: Product;
-}
+  }
 export function SingleProduct(props: propsInterface) {
   // const valueFromContext = useContext(UserContext)
   return (
@@ -12,6 +12,9 @@ export function SingleProduct(props: propsInterface) {
       <p>{props.data.name}</p>
       <p>{props.data.price}</p>
       <p>{props.data.seller}</p>
-    </>
+      </>
   );
+
+
+
 }

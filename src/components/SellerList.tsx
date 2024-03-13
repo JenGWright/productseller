@@ -17,9 +17,12 @@ export function SellerList(){
           });
       }, []);
 
-    return (<>
-    {allSellers.map(seller =>{return <SingleSeller key={seller.id} data={seller}></SingleSeller>})}
-    
-    
-    </>)
-}
+      return (
+        <>
+          {allSellers.length <= 0 && <p>Seller list is empty</p>}
+          {allSellers.map((seller) => {
+            return <SingleSeller key={seller.id} data={seller}></SingleSeller>;
+          })}
+        </>
+      );
+    }

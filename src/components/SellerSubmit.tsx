@@ -24,8 +24,8 @@ export function SellerSubmit(){
     }
   
     return (
-      <>
-        <h1>Submit a new Seller</h1>
+      <form onSubmit={buttonClickHandler}>
+        <h1>Enter New Seller</h1>
         <input
           onChange={idInputHandler}
           value={idInput}
@@ -36,7 +36,10 @@ export function SellerSubmit(){
           value={nameInput}
           placeholder="Enter Seller Name"
         ></input>
-        <button onClick={buttonClickHandler}>submit</button>
-      </>
-    );
+        <button type="submit">Submit</button>
+
+      
+
+        </form>
+    ); 
   }

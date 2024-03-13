@@ -32,18 +32,19 @@ export function ProductSubmit() {
   }
 
   return (
-    <>
+  
+    <form onSubmit={buttonClickHandler}>
       <h1>Submit a new product</h1>
       <input
         onChange = {nameInputHandler}
         value = {nameInput}
-        placeholder="Enter product name"
+        placeholder="Enter Product Name"
         ></input>
       
       <input
         onChange = {priceInputHandler}
         value = {priceInput}
-        placeholder="Enter product price"
+        placeholder="Enter Price"
         ></input>
 
       <input
@@ -52,8 +53,11 @@ export function ProductSubmit() {
         placeholder="Enter Seller ID"
         ></input>
 
-      <button onClick = {buttonClickHandler} >Submit</button>
+      <button type = "submit" >Submit</button>
 
-    </>
+      </form>
+      
+
+    
   );
 }

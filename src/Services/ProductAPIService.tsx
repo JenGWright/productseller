@@ -15,4 +15,26 @@ export function postProductAPI(data: Product) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
+
 }
+
+  export function updateProductAPI(data: Product) {
+    return fetch(apiBaseURL + "product/" + data.id, {
+      method: "PUT",
+      mode: "cors",
+      headers: { "Content-Type": "application/json"},
+      body: JSON.stringify(data),
+    });
+
+  }
+
+    export function deleteProductAPI(data: number) {
+      return fetch(apiBaseURL + "product/" + data, {
+        method: "DELTE",
+        mode: "cors",
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify(data),
+      });  
+
+    
+  }
